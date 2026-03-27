@@ -18,4 +18,4 @@ Additionally, the repository contains materials and exercises from selected onli
 
 The goal of this project is continuous improvement, experimentation, and building a solid foundation in data analytics.
 
-![At grilsjs workshop](./readme-image.jpeg)
+![At grilsjs workshop](./readme-image.png)
