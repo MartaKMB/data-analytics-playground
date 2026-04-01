@@ -1,0 +1,464 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0226.1626                               -->
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0226.1626)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Mass Market (ABA Bestsellers 02-28-18)' inline='true' name='federated.0r3yg8d1srehsh195covg1n6n5bs' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ABA Bestsellers 02-28-18' name='excel-direct.1jy6tku0ml6ztx18nqog10kk7lhb'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/martamucha-balcerek/Downloads/Tableau Prep Data/ABA Bestsellers 02-28-18.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='ABA Bestsellers 02-21-18' name='excel-direct.1f1ritx1iyy3j318m33u00q4dea0'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/martamucha-balcerek/Downloads/Tableau Prep Data/ABA Bestsellers 02-21-18.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.1jy6tku0ml6ztx18nqog10kk7lhb' name='Mass Market' table='[&apos;Mass Market$&apos;]' type='table'>
+            <columns gridOrigin='A1:C11:no:A1:C11:0' header='yes' outcome='2'>
+              <column datatype='integer' name='Rank' ordinal='0' />
+              <column datatype='string' name='Info' ordinal='1' />
+              <column datatype='string' name='Last Week/ Weeks on List' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1f1ritx1iyy3j318m33u00q4dea0' name='Mass Market1' table='[&apos;Mass Market$&apos;]' type='table'>
+            <columns gridOrigin='A1:C11:no:A1:C11:0' header='yes' outcome='2'>
+              <column datatype='integer' name='Rank' ordinal='0' />
+              <column datatype='string' name='Info' ordinal='1' />
+              <column datatype='string' name='Last Week/ Weeks on List' ordinal='2' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Info (Mass Market1)]' value='[Mass Market1].[Info]' />
+          <map key='[Info]' value='[Mass Market].[Info]' />
+          <map key='[Last Week/ Weeks on List (Mass Market1)]' value='[Mass Market1].[Last Week/ Weeks on List]' />
+          <map key='[Last Week/ Weeks on List]' value='[Mass Market].[Last Week/ Weeks on List]' />
+          <map key='[Rank (Mass Market1)]' value='[Mass Market1].[Rank]' />
+          <map key='[Rank]' value='[Mass Market].[Rank]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Mass Market]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C11:no:A1:C11:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Mass Market1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C11:no:A1:C11:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rank]</local-name>
+            <parent-name>[Mass Market]</parent-name>
+            <remote-alias>Rank</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Info</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Info]</local-name>
+            <parent-name>[Mass Market]</parent-name>
+            <remote-alias>Info</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Last Week/ Weeks on List</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Last Week/ Weeks on List]</local-name>
+            <parent-name>[Mass Market]</parent-name>
+            <remote-alias>Last Week/ Weeks on List</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rank (Mass Market1)]</local-name>
+            <parent-name>[Mass Market1]</parent-name>
+            <remote-alias>Rank</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Mass Market_C76599911D264F798099A83B5A30C91D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Info</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Info (Mass Market1)]</local-name>
+            <parent-name>[Mass Market1]</parent-name>
+            <remote-alias>Info</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Mass Market_C76599911D264F798099A83B5A30C91D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Last Week/ Weeks on List</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Last Week/ Weeks on List (Mass Market1)]</local-name>
+            <parent-name>[Mass Market1]</parent-name>
+            <remote-alias>Last Week/ Weeks on List</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Mass Market_C76599911D264F798099A83B5A30C91D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Title (Feb21)' datatype='string' name='[Info (Mass Market1) - Split 1]' role='dimension' type='nominal' user:SplitFieldIndex='9' user:SplitFieldOrigin='[federated.0r3yg8d1srehsh195covg1n6n5bs].[Info (Mass Market1)]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [Info (Mass Market1)], &quot;|&quot;, 1 ) )' />
+      </column>
+      <column caption='Author (Feb21)' datatype='string' name='[Info (Mass Market1) - Split 2]' role='dimension' type='nominal' user:SplitFieldIndex='10' user:SplitFieldOrigin='[federated.0r3yg8d1srehsh195covg1n6n5bs].[Info (Mass Market1)]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( [Info (Mass Market1)], &quot;|&quot;, 2 ), &quot;$&quot;, 1 ) )' />
+      </column>
+      <column caption='ISBN (Feb21)' datatype='string' name='[Info (Mass Market1) - Split 3]' role='dimension' type='nominal' user:SplitFieldIndex='11' user:SplitFieldOrigin='[federated.0r3yg8d1srehsh195covg1n6n5bs].[Info (Mass Market1)]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( SPLIT( [Info (Mass Market1)], &quot;|&quot;, 3 ), &quot;ISBN&quot;, 2 ), &quot;:&quot;, 2 ) )' />
+      </column>
+      <column datatype='string' hidden='true' name='[Info (Mass Market1)]' role='dimension' type='nominal' />
+      <column caption='Title' datatype='string' name='[Info - Split 2]' role='dimension' type='nominal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.0r3yg8d1srehsh195covg1n6n5bs].[Info]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [Info], &quot;|&quot;, 1 ) )' />
+      </column>
+      <column caption='Author' datatype='string' name='[Info - Split 3]' role='dimension' type='nominal' user:SplitFieldIndex='3' user:SplitFieldOrigin='[federated.0r3yg8d1srehsh195covg1n6n5bs].[Info]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( [Info], &quot;|&quot;, 2 ), &quot;$&quot;, 1 ) )' />
+      </column>
+      <column caption='ISBN' datatype='string' name='[Info - Split 4]' role='dimension' type='nominal' user:SplitFieldIndex='4' user:SplitFieldOrigin='[federated.0r3yg8d1srehsh195covg1n6n5bs].[Info]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( SPLIT( [Info], &quot;|&quot;, 3 ), &quot;ISBN&quot;, 2 ), &quot;:&quot;, 2 ) )' />
+      </column>
+      <column datatype='string' hidden='true' name='[Info]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Last Week (Feb21)' datatype='integer' datatype-customized='true' name='[Last Week/ Weeks on List (Mass Market1) - Split 1]' role='dimension' type='ordinal' user:SplitFieldIndex='7' user:SplitFieldOrigin='[federated.0r3yg8d1srehsh195covg1n6n5bs].[Last Week/ Weeks on List (Mass Market1)]'>
+        <calculation class='tableau' formula='INT(SPLIT( [Last Week/ Weeks on List (Mass Market1)], &quot;/&quot;, 1 ))' />
+      </column>
+      <column aggregation='Sum' caption='Weeks on List (Feb21)' datatype='integer' name='[Last Week/ Weeks on List (Mass Market1) - Split 2]' role='dimension' type='ordinal' user:SplitFieldIndex='8' user:SplitFieldOrigin='[federated.0r3yg8d1srehsh195covg1n6n5bs].[Last Week/ Weeks on List (Mass Market1)]'>
+        <calculation class='tableau' formula='INT( SPLIT( [Last Week/ Weeks on List (Mass Market1)], &quot;/&quot;, 2 ) )' />
+      </column>
+      <column datatype='string' hidden='true' name='[Last Week/ Weeks on List (Mass Market1)]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Last Week' datatype='integer' name='[Last Week/ Weeks on List - Split 1]' role='dimension' type='ordinal' user:SplitFieldIndex='5' user:SplitFieldOrigin='[federated.0r3yg8d1srehsh195covg1n6n5bs].[Last Week/ Weeks on List]'>
+        <calculation class='tableau' formula='INT( SPLIT( [Last Week/ Weeks on List], &quot;/&quot;, 1 ) )' />
+      </column>
+      <column aggregation='Sum' caption='Weeks on List' datatype='integer' name='[Last Week/ Weeks on List - Split 2]' role='dimension' type='ordinal' user:SplitFieldIndex='6' user:SplitFieldOrigin='[federated.0r3yg8d1srehsh195covg1n6n5bs].[Last Week/ Weeks on List]'>
+        <calculation class='tableau' formula='INT( SPLIT( [Last Week/ Weeks on List], &quot;/&quot;, 2 ) )' />
+      </column>
+      <column datatype='string' hidden='true' name='[Last Week/ Weeks on List]' role='dimension' type='nominal' />
+      <column caption='Rank (Feb21)' datatype='integer' name='[Rank (Mass Market1)]' role='measure' type='quantitative' />
+      <column caption='Feb28' datatype='table' name='[__tableau_internal_object_id__].[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11]' role='measure' type='quantitative' />
+      <column caption='Feb21' datatype='table' name='[__tableau_internal_object_id__].[Mass Market_C76599911D264F798099A83B5A30C91D]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/martamucha-balcerek/Desktop/analityk danych/data-playground/tableau-prep-data-free-course/Mass Market (ABA Bestsellers 02-28-18).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='04/01/2026 11:27:14 AM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='Mass Market_A91885C5A8584C4DB57C71CFF41DDD11' table='[Extract].[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11]' type='table' />
+            <relation name='Mass Market_C76599911D264F798099A83B5A30C91D' table='[Extract].[Mass Market_C76599911D264F798099A83B5A30C91D]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Info (Mass Market1)]' value='[Mass Market_C76599911D264F798099A83B5A30C91D].[Info]' />
+            <map key='[Info]' value='[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11].[Info]' />
+            <map key='[Last Week/ Weeks on List (Mass Market1)]' value='[Mass Market_C76599911D264F798099A83B5A30C91D].[Last Week/ Weeks on List]' />
+            <map key='[Last Week/ Weeks on List]' value='[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11].[Last Week/ Weeks on List]' />
+            <map key='[Rank (Mass Market1)]' value='[Mass Market_C76599911D264F798099A83B5A30C91D].[Rank]' />
+            <map key='[Rank]' value='[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11].[Rank]' />
+          </cols>
+          <refresh>
+            <refresh-event add-from-file-path='Mass Market (ABA Bestsellers 02-28-18)' increment-value='%null%' refresh-type='create' rows-inserted='20' timestamp-start='2026-04-01 11:27:14.270' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Rank</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Rank]</local-name>
+              <parent-name>[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11]</parent-name>
+              <remote-alias>Rank</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Mass Market</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Info</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Info]</local-name>
+              <parent-name>[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11]</parent-name>
+              <remote-alias>Info</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Mass Market</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_S2' />
+              <object-id>[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Last Week/ Weeks on List</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Last Week/ Weeks on List]</local-name>
+              <parent-name>[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11]</parent-name>
+              <remote-alias>Last Week/ Weeks on List</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Mass Market</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_S2' />
+              <object-id>[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rank</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Rank (Mass Market1)]</local-name>
+              <parent-name>[Mass Market_C76599911D264F798099A83B5A30C91D]</parent-name>
+              <remote-alias>Rank</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Mass Market1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Mass Market_C76599911D264F798099A83B5A30C91D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Info</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Info (Mass Market1)]</local-name>
+              <parent-name>[Mass Market_C76599911D264F798099A83B5A30C91D]</parent-name>
+              <remote-alias>Info</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Mass Market1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_S2' />
+              <object-id>[Mass Market_C76599911D264F798099A83B5A30C91D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Last Week/ Weeks on List</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Last Week/ Weeks on List (Mass Market1)]</local-name>
+              <parent-name>[Mass Market_C76599911D264F798099A83B5A30C91D]</parent-name>
+              <remote-alias>Last Week/ Weeks on List</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Mass Market1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_S2' />
+              <object-id>[Mass Market_C76599911D264F798099A83B5A30C91D]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='10' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Feb28' id='Mass Market_A91885C5A8584C4DB57C71CFF41DDD11'>
+            <properties context=''>
+              <relation connection='excel-direct.1jy6tku0ml6ztx18nqog10kk7lhb' name='Mass Market' table='[&apos;Mass Market$&apos;]' type='table'>
+                <columns gridOrigin='A1:C11:no:A1:C11:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='Rank' ordinal='0' />
+                  <column datatype='string' name='Info' ordinal='1' />
+                  <column datatype='string' name='Last Week/ Weeks on List' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Mass Market_A91885C5A8584C4DB57C71CFF41DDD11' table='[Extract].[Mass Market_A91885C5A8584C4DB57C71CFF41DDD11]' type='table' />
+            </properties>
+          </object>
+          <object caption='Feb21' id='Mass Market_C76599911D264F798099A83B5A30C91D'>
+            <properties context=''>
+              <relation connection='excel-direct.1f1ritx1iyy3j318m33u00q4dea0' name='Mass Market1' table='[&apos;Mass Market$&apos;]' type='table'>
+                <columns gridOrigin='A1:C11:no:A1:C11:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='Rank' ordinal='0' />
+                  <column datatype='string' name='Info' ordinal='1' />
+                  <column datatype='string' name='Last Week/ Weeks on List' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Mass Market_C76599911D264F798099A83B5A30C91D' table='[Extract].[Mass Market_C76599911D264F798099A83B5A30C91D]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[Info]' />
+                <expression op='[Info (Mass Market1)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[Last Week/ Weeks on List]' />
+                <expression op='[Last Week/ Weeks on List (Mass Market1)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[Rank]' />
+                <expression op='[Rank (Mass Market1)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='Mass Market_A91885C5A8584C4DB57C71CFF41DDD11' />
+            <second-end-point object-id='Mass Market_C76599911D264F798099A83B5A30C91D' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9252807A-F9A2-4FE0-946D-35F0BFFC59A9}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4EBE9539-DCC1-4827-BEA5-283BA7FB2D58}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 1' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
