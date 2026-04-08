@@ -7,15 +7,24 @@ This repository serves as a structured learning playground where each branch rep
 Each branch focuses on a separate area, such as:
 
 * SQL and database querying
-* Python for data analysis
-* Pandas & NumPy
 * Data visualization
+* Tableau
+* Power BI
 * Statistics fundamentals
 * Excel and business analytics
+* Python for data analysis
 * Portfolio mini-projects
 
 Additionally, the repository contains materials and exercises from selected online courses and workshops.
 
 The goal of this project is continuous improvement, experimentation, and building a solid foundation in data analytics.
 
-![At grilsjs workshop](./readme-image.jpeg)
+
+Tableau project:
+![Tableau project from Free Tableau Course](./tableau-project.png)
+
+Power BI project:
+![Power BI project from Data Heroes Course](./dh-pbi-project.png)
+
+Excel dashboard:
+![Excel project from Data Heroes Course](./dh-excel-dashboard.png)
