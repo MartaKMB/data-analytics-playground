@@ -1,18 +1,18 @@
 import pandas as pd
 
+# 8.10.2
 
 # Series
 
 s = pd.Series([10,20,30,40])
 
 # print([10,20,30,40])
-print(s)
+# print(s)
 # print(type(s))
 
 # s *= 2
 # print(s+20)
 # print(s>35)
-
 
 # DataFrame
 
@@ -24,7 +24,7 @@ data = {
 
 df = pd.DataFrame(data)
 
-print(df)
+# print(df)
 # print(type(df))
 
 # df.to_csv("sales.csv", index=False)
@@ -39,3 +39,40 @@ print(df)
 # print(df_csv["units"] + 20)
 # print(df_csv[["product", "price"]])
 # print(df_csv["price"] * df_csv["units"])
+
+# 8.10.3
+
+# loc, iloc
+
+data_3 = {
+    "product": ["Coffe", "Tea", "Water", "Juice", "Soda"],
+    "price": [12, 8, 3, 5, 7],
+    "units": [120, 80, 200, 60, 150]
+}
+
+df_3 = pd.DataFrame(data_3)
+# print(df_3)
+
+# print(df_3.loc[0:2], "price", "units") # po indexie i nazwie rekordu
+# print(df_3.loc[0:1])
+
+# print(df_3.iloc[0]) # po kolejności, lokalizacja kratki
+# print(df_3.iloc[0:2, 1:3])
+
+# maski boolowe
+# print(df_3["units"] > 100)
+
+# print(df_3.loc[df_3["units"] > 100, ["product", "units"]])
+
+df_3_2 = df_3.set_index("product")
+# print(df_3_2)
+# print(df_3_2.loc["Coffe"])
+
+df_3_reset = df_3_2.reset_index()
+
+# print(df_3_reset)
+
+df_3_custom = pd.DataFrame(data_3, index = ['a', 'b', 'c', 'd', 'e'])
+
+# print(df_3_custom)
+# print(df_3_custom.loc['c'])
