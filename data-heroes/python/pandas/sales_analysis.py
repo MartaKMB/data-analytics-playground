@@ -1,7 +1,7 @@
 import pandas as pd
 
 # GROUP BY
-print("- - - GROUPBY - - -")
+print("\n- - - GROUPBY - - -\n")
 
 sales_data ={
     "product": ["Coffee", "Tea", "Water", "Coffee", "Tea", "Water"],
@@ -16,7 +16,7 @@ print(sales.groupby("product")["units"].sum())
 # print(sales.groupby(["product", "region"])["units"].agg(["sum", "mean"]))
 
 # JOIN
-print("- - - MERGE | CONCAT - - -")
+print("\n- - - MERGE | CONCAT - - -\n")
 
 products = pd.DataFrame({
     "product": ["Coffee", "Tea", "Water", "Juice"],
