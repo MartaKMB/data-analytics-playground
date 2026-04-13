@@ -2,7 +2,7 @@ import pandas as pd
 
 # 8.10.2
 
-# Series
+# SERIES
 
 s = pd.Series([10,20,30,40])
 
@@ -14,7 +14,7 @@ s = pd.Series([10,20,30,40])
 # print(s+20)
 # print(s>35)
 
-# DataFrame
+# DATA FRAME
 
 data = {
     "product": ["Coffee", "Tea", "Water"],
@@ -42,7 +42,7 @@ df = pd.DataFrame(data)
 
 # 8.10.3
 
-# loc, iloc
+# LOC, ILOC
 
 data_3 = {
     "product": ["Coffe", "Tea", "Water", "Juice", "Soda"],
@@ -76,3 +76,34 @@ df_3_custom = pd.DataFrame(data_3, index = ['a', 'b', 'c', 'd', 'e'])
 
 # print(df_3_custom)
 # print(df_3_custom.loc['c'])
+
+# 8.10.4
+
+# NAN
+
+data_4 = {
+    "product": ["Coffe", "Tea", "Water", "Juice"],
+    "price": [12, 8, None, 5],
+    "units": [120, None, 200, 80],
+    "region": ["North", "South", "East", None]
+}
+
+df_4 = pd.DataFrame(data_4)
+# print(df_4)
+# print(df_4.isna().any()) # isna True and False, so additioal any
+
+# print(df_4.describe())
+# print(df_4.dropna());
+
+df_4_filled = df_4.fillna({"price": 10, "units": 0, "region": "Unknown"})
+# print(df_4_filled)
+
+# STASTISTICS - COLUMNS
+
+# print(df_4_filled.sum())
+# print(df_4_filled.max())
+# print(df_4_filled[["price", "units"]].min())
+
+# STATISTICS - RECORDS, ROWS
+
+print(df_4_filled[["price", "units"]].max(axis=1))
