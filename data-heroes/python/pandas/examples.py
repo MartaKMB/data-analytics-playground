@@ -106,4 +106,25 @@ df_4_filled = df_4.fillna({"price": 10, "units": 0, "region": "Unknown"})
 
 # STATISTICS - RECORDS, ROWS
 
-print(df_4_filled[["price", "units"]].max(axis=1))
+# print(df_4_filled[["price", "units"]].max(axis=1))
+
+# 8.10.5
+
+# APPLY
+
+def add_tax(x):
+    return x*1.23
+
+df_4_filled["price_with_tax"] = df_4_filled["price"].apply(add_tax) # add new column
+# print(df_4_filled)
+
+# LAMBDA
+
+add_tax_5 = lambda x: x*1.23
+add = lambda a,b: a+b
+
+# print(add(13,3))
+
+df_4_filled["revenue"] = df_4_filled.apply(lambda   row: row["price"] * row["units"], axis = 1) # work on records / rows
+
+print(df_4_filled)
