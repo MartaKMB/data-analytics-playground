@@ -26,5 +26,8 @@ Tableau project:
 Power BI project:
 ![Power BI project from Data Heroes Course](./dh-pbi-project.png)
 
+Python dashboard:
+![Python project from Data Heroes Course](./dh-python-dashboard.png)
+
 Excel dashboard:
 ![Excel project from Data Heroes Course](./dh-excel-dashboard.png)
