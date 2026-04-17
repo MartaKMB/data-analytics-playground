@@ -21,3 +21,6 @@ sales_enriched = cleaner.enrich_sales_with_dimensions(sales, products, customers
 
 analyzer = SalesAnalyzer(sales_enriched)
 kpis = analyzer.kpis()
+by_prod = analyzer.by_product()
+by_reg = analyzer.by_region()
+by_mon = analyzer.by_month()
