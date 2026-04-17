@@ -1,5 +1,5 @@
 from loader import Loader
-# from cleaner import Cleaner
+from cleaner import Cleaner
 # from analyzer import SalesAnalyzer
 # import visualizer as viz
 import os
@@ -12,3 +12,9 @@ try:
 except Exception as e:
     print("Data loading error: ", e)
     raise SystemExit(1)
+
+cleaner = Cleaner()
+products = cleaner.clean_products(products)
+customers = cleaner.clean_customers(customers)
+sales = cleaner.clean_sales(sales)
+sales_enriched = cleaner.enrich_sales_with_dimensions(sales, products, customers)

@@ -57,6 +57,7 @@ class Loader:
         self._ensure_exists(self.path_sales)
         df= self._read_csv(self.path_sales)
         self._validate_columns(df, ["sale_id", "product_id", "customer_id", "units", "date"], "sales.csv")
+        return df
 
     def load_all(self):
         products = self.load_products()
