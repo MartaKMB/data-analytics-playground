@@ -1,6 +1,6 @@
 from loader import Loader
 from cleaner import Cleaner
-# from analyzer import SalesAnalyzer
+from analyzer import SalesAnalyzer
 # import visualizer as viz
 import os
 
@@ -18,3 +18,6 @@ products = cleaner.clean_products(products)
 customers = cleaner.clean_customers(customers)
 sales = cleaner.clean_sales(sales)
 sales_enriched = cleaner.enrich_sales_with_dimensions(sales, products, customers)
+
+analyzer = SalesAnalyzer(sales_enriched)
+kpis = analyzer.kpis()

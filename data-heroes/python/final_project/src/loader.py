@@ -63,5 +63,4 @@ class Loader:
         products = self.load_products()
         customers = self.load_customers()
         sales = self.load_sales()
-        print(products, customers, sales)
         return products, customers, sales
