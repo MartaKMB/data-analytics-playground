@@ -1,7 +1,7 @@
 from loader import Loader
 from cleaner import Cleaner
 from analyzer import SalesAnalyzer
-# import visualizer as viz
+import visualizer as viz
 import os
 
 print(os.getcwd())
@@ -24,3 +24,16 @@ kpis = analyzer.kpis()
 by_prod = analyzer.by_product()
 by_reg = analyzer.by_region()
 by_mon = analyzer.by_month()
+
+os.makedirs("data-heroes/python/final_project/reports/figures", exist_ok=True)
+out = viz.save_dashboard(
+    df_by_product=by_prod,
+    df_by_region=by_reg,
+    df_by_month=by_mon,
+    kpis=kpis,
+    n_top=10,
+    out_dir="data-heroes/python/final_project/reports/figures",
+    filename="dashboard.png"
+)
+
+print(f"Dashboard saved to: {out}")
