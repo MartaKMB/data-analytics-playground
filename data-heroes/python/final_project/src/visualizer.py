@@ -12,12 +12,13 @@ def save_dashboard(
 
 ):
     top = df_by_product.nlargest(n_top, "revenue").copy()
-    fig, axs = plt.subplots(2,2,figsize=[12,7])
+    fig, axs = plt.subplots(2, 2, figsize=(12,7))
 
     axs[0, 0].bar(top["product_name"], top["revenue"])
     axs[0, 0].set_title(f"Top {n_top} products by revenue")
     axs[0, 0].set_xlabel("Product")
     axs[0, 0].set_ylabel("Revenue")
+    axs[0, 0].tick_params(axis="x", rotation=45)
     axs[0, 0].grid(axis="y", alpha=0.3)
 
     axs[0, 1].bar(df_by_region["region"], df_by_region["revenue"])
@@ -38,8 +39,8 @@ def save_dashboard(
         "KEY METRICS",
         "-------------",
         f"Total revenue: {kpis.get("total_revenue", 0):,.2f}",
-        f"Total units: {kpis.get("total_units", 0)}",
-        f"Avg price: {kpis.get("avg_price", 0):,.2f}",
+        f"Total units: {kpis.get("total_units", 0):,.2f}",
+        f"Avg price: {kpis.get("average_price", 0):,.2f}",
         f"Products: {kpis.get("distinct_products", 0)}",
         f"Customers: {kpis.get("distinct_customers", 0)}"
     ]
@@ -51,9 +52,13 @@ def save_dashboard(
     )
 
     fig.suptitle("Sales dashboard", fontsize=14, y=0.98)
+    plt.tight_layout()
+    plt.subplots_adjust(top=0.92)
 
     out_path = os.path.join(out_dir, filename)
 
     plt.savefig(out_path, dpi=150)
 
     plt.close(fig)
+
+    return out_path
