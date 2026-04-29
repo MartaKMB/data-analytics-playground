@@ -31,3 +31,6 @@ Python dashboard:
 
 Excel dashboard:
 ![Excel project from Data Heroes Course](./dh-excel-dashboard.png)
+
+## Selected projects
+Go to my portfolio: https://martakmb.github.io/data-analysis-portfolio/
