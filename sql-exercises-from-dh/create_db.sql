@@ -1,0 +1,4 @@
+CREATE DATABASE pets_shop
+WITH TEMPLATE = template0
+LOCALE_PROVIDER = icu;
+
